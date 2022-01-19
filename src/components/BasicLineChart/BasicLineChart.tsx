@@ -1,12 +1,20 @@
-import React, { FC } from 'react';
-import styles from './BasicLineChart.module.scss';
+import React, { useEffect, RefObject } from 'react'
+import basicLineChart from './BasicLineChart.module.scss'
 
-interface BasicLineChartProps {}
+const BasicLineChart = (props: BasicLineChartProps) => {
 
-const BasicLineChart: FC<BasicLineChartProps> = () => (
-  <div className={styles.BasicLineChart} data-testid="BasicLineChart">
-    BasicLineChart Component
-  </div>
-);
+    useEffect( () => {
+        draw()
+    })
+ 
+    const draw = () => {
+    }
 
-export default BasicLineChart;
+    return <div className="basicLineChart" />
+}
+
+interface BasicLineChartProps {
+    // TODO
+}
+
+export default BasicLineChart
