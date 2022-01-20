@@ -12,7 +12,8 @@ function App() {
           top= {10}
           bottom= {100}
           left= {50}
-          right= {50} />
+          right= {50}
+          fill= {'red'} />
       </header>
     </div>
   );

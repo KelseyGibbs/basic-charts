@@ -7,5 +7,6 @@ export namespace Types {
         close: number
         adjClose: number
         volume: number
+        fill: string
     }
 }

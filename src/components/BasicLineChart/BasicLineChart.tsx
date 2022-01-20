@@ -13,7 +13,7 @@ const BasicLineChart = (props: BasicLineChartProps) => {
     const width = props.width - props.left - props.right;
     const height = props.height - props.top - props.bottom;
 
-    d3.dsv(",", "./data/PRFT.csv", (d) => {
+    d3.dsv(",", "./Data/PRFT.csv", (d) => {
       const res = d as unknown as Types.Data;
       const date = d3.timeParse("%Y-%m-%d")(res.date);
       return {
@@ -56,8 +56,10 @@ const BasicLineChart = (props: BasicLineChartProps) => {
         .range([height, 0]);
         
       svg.append("g").call(d3.axisLeft(y))
+        .append('path')
         .datum(data)
         .attr("fill", "none")
+        .attr('stroke', props.fill)
         .attr("stroke-width", 1.5)
         .attr(
           "d",
@@ -84,6 +86,7 @@ interface BasicLineChartProps {
   bottom: number;
   left: number;
   right: number;
+  fill: string;
 }
 
 export default BasicLineChart;

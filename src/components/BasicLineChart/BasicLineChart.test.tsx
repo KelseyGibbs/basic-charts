@@ -11,7 +11,8 @@ describe('<BasicLineChart />', () => {
       top= {10}
       bottom= {50}
       left= {50}
-      right= {50} 
+      right= {50}
+      fill= {'red'}
     />);
     
     const basicLineChart = screen.getByTestId('BasicLineChart');
